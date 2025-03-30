@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="file_8h" kind="file" language="C++">
+    <compoundname>file.h</compoundname>
+    <includes local="no">sys/types.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>file.h</label>
+        <link refid="file_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sys/types.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct__OS__FILE__UNIQUE__ID" prot="public">_OS_FILE_UNIQUE_ID</innerclass>
+    <innerclass refid="struct__OS__STRUCT__STAT" prot="public">_OS_STRUCT_STAT</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="file_8h_1aba4da18365749b99f6f403224f0fc122" prot="public" static="no">
+        <name>OS_APIS_STAT_BODY</name>
+        <initializer>    unsigned long st_dev;        \
+    unsigned long st_ino;        \
+    unsigned long st_nlink;      \
+    unsigned int st_mode;        \
+    unsigned int st_uid;         \
+    unsigned int st_gid;         \
+    unsigned long st_rdev;       \
+    long st_size;                \
+    long st_blksize;             \
+    long st_blocks;              \
+    unsigned long st_atim;       \
+    unsigned long st_atime_nsec; \
+    unsigned long st_mtim;       \
+    unsigned long st_mtime_nsec; \
+    unsigned long st_ctim;       \
+    unsigned long st_ctime_nsec;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/os-apis/00-export-include/os-apis/file.h" line="98" column="9" bodyfile="Source/os-apis/00-export-include/os-apis/file.h" bodystart="98" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="define" id="file_8h_1a5009ea16033aa83b3eb56184f568b62e" prot="public" static="no">
+        <name>OS_APIS_STDERR_FILENAME</name>
+        <initializer>((const CHAR*)((ADDRINT)2))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/os-apis/00-export-include/os-apis/file.h" line="703" column="9" bodyfile="Source/os-apis/00-export-include/os-apis/file.h" bodystart="703" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <member refid="group__OS__APIS__FILE_1gaf79cb66b43257af42f5e75915c9d3b46" kind="enum"><name>OS_FILE_OPEN_TYPE</name></member>
+      <member refid="group__OS__APIS__FILE_1gaf479f66e1623df5edfa3e38f040f5088" kind="enum"><name>OS_FILE_PERMISSION</name></member>
+      <member refid="group__OS__APIS__FILE_1gacd4e4a1518bf251af4bfd2a8fe697026" kind="enum"><name>OS_FILE_SEEK_TYPE</name></member>
+      <member refid="group__OS__APIS__FILE_1ga72758a31adaf5c4afde4341e70a848e7" kind="enum"><name>OS_FILE_ATTRIBUTES</name></member>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__OS__APIS__FILE_1gaba27a650028099cf71b43ff091ac2ca2" kind="typedef"><name>OS_FILE_PERMISSION_TYPE</name></member>
+      <member refid="group__OS__APIS__FILE_1gaf388a0f1cc1446b1e1ffca6907a2ffca" kind="typedef"><name>OS_FILE_UNIQUE_ID</name></member>
+      <member refid="group__OS__APIS__FILE_1ga111c9133a6edb2e9975e3a68ee2f6c2b" kind="typedef"><name>OS_STRUCT_STAT</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__FILE_1ga40b4d1b8edd74fb9f1a117d4e9765efd" kind="function"><name>OS_OpenFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga84a9342eec9a5358636f49ea2c817b43" kind="function"><name>OS_WriteFD</name></member>
+      <member refid="group__OS__APIS__FILE_1gad90001eac7b50ec5a2df0e19484321f4" kind="function"><name>OS_ReadFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga23a588dc0dccb95913681fbb7a02d22b" kind="function"><name>OS_SeekFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga2c0fb2fdbfd986c4c5ad03f0237e56e5" kind="function"><name>OS_CloseFD</name></member>
+      <member refid="group__OS__APIS__FILE_1gaf12497d2883236cddea461efcd1ff3c2" kind="function"><name>OS_DeleteFile</name></member>
+      <member refid="group__OS__APIS__FILE_1gab62ec17a32d86493f24fbc83964d12b2" kind="function"><name>OS_FlushFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga376c04250868ee7f9bcaefee08e4197c" kind="function"><name>OS_Stat</name></member>
+      <member refid="group__OS__APIS__FILE_1ga1f15057e510f50c9041c5977c1ab3099" kind="function"><name>OS_Fstat</name></member>
+      <member refid="group__OS__APIS__FILE_1gaae4a329b11c2689d737a94b8e8c80338" kind="function"><name>OS_Lstat</name></member>
+      <member refid="group__OS__APIS__FILE_1gac668ae6bc73afec7519aaf999118e7a2" kind="function"><name>OS_GetFDAttributes</name></member>
+      <member refid="group__OS__APIS__FILE_1ga13d679b9085d6fa1db37b2816dc86bef" kind="function"><name>OS_FilePermissionsFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga491827c8e00c29e9d0ba9a2ef9b3cd59" kind="function"><name>OS_FileSizeFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga1a590d06769c84c9a60f48f9b5669c73" kind="function"><name>OS_Cwd</name></member>
+      <member refid="group__OS__APIS__FILE_1ga4e58fdad8fb7819318047b3e835a8e02" kind="function"><name>OS_Chdir</name></member>
+      <member refid="group__OS__APIS__FILE_1ga20fb89cc9569d6312fea52d24608baf2" kind="function"><name>OS_OpenDirFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga89de07f95f92263c15308eecfd5c2445" kind="function"><name>OS_MkDir</name></member>
+      <member refid="group__OS__APIS__FILE_1gaad7416af279aaf0f33279ce6d732f0ad" kind="function"><name>OS_DeleteDirectory</name></member>
+      <member refid="group__OS__APIS__FILE_1ga2dd6bf508fd9aeab2a371a3c1d4e285c" kind="function"><name>OS_IsConsoleFD</name></member>
+      <member refid="group__OS__APIS__FILE_1gad067813c5642c1a4dfe3f8ea9ac9407c" kind="function"><name>OS_ReadDirectoryFD</name></member>
+      <member refid="group__OS__APIS__FILE_1gabd5a0efabfd2ca004cb9ad6d1f0f8d2c" kind="function"><name>OS_GetFDAccessMode</name></member>
+      <member refid="group__OS__APIS__FILE_1ga91ad7341f68a52f66ab515afa4ac277b" kind="function"><name>OS_ReadLink</name></member>
+      <member refid="group__OS__APIS__FILE_1ga38a707fb6f53313ee7c24d75caa51b63" kind="function"><name>OS_GetFileAttributes</name></member>
+      <member refid="group__OS__APIS__FILE_1gac1b3420b3c0884a71cb7d00e010b43f0" kind="function"><name>OS_RenameFile</name></member>
+      <member refid="group__OS__APIS__FILE_1gad73f7448fc8ed37ea36dc1c049d9c513" kind="function"><name>OS_FileUniqueID</name></member>
+      <member refid="group__OS__APIS__FILE_1ga52f300337dc22a38ba9a1a85ccf30221" kind="function"><name>OS_DuplicateFD</name></member>
+      <member refid="group__OS__APIS__FILE_1ga5f5bd13714935b797d6e5dff17498c5f" kind="function"><name>OS_Ftruncate</name></member>
+      <member refid="group__OS__APIS__FILE_1gaf3ebf7cd4998316c792a0665241187a1" kind="function"><name>OS_Realpath</name></member>
+      <member refid="group__OS__APIS__FILE_1ga9a8c9ca581cf49d6e1f02ec1b08d6aa8" kind="function"><name>OS_ReportFileOpen</name></member>
+      <member refid="group__OS__APIS__FILE_1gaf948a39371c9cdee107de39b1b7f9b4b" kind="function"><name>OS_ReportFileClose</name></member>
+      <member refid="group__OS__APIS__FILE_1ga740450a1ad65dd8935ecb54262d6010d" kind="function"><name>OS_GetLowestFileDescriptorToUse</name></member>
+      <member refid="group__OS__APIS__FILE_1ga6fa2794665c242bfa118b3b9ae4712a7" kind="function"><name>OS_RelocateAndReportFileOpen</name></member>
+      <member refid="group__OS__APIS__FILE_1gaff4103e9282c2a0ad0c5dce7414f74a3" kind="function"><name>OS_WasFileReportedOpen</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2021<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_FILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_FILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>File<sp/>objects<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>For<sp/>Directory<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_READ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),<sp/></highlight><highlight class="comment">//<sp/>List<sp/>members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_WRITE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_EXECUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2),<sp/></highlight><highlight class="comment">//<sp/>N/A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_APPEND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>3),<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>sub-directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_TRUNCATE<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>4),<sp/></highlight><highlight class="comment">//<sp/>N/A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_CREATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>5),<sp/></highlight><highlight class="comment">//<sp/>N/A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_CREATE_EXCL<sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>6),<sp/></highlight><highlight class="comment">//<sp/>Create<sp/>exclusively</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_DELETE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>7),<sp/></highlight><highlight class="comment">//<sp/>Delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_OPEN_TYPE_CLOSE_ON_EXEC<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>8)<sp/><sp/></highlight><highlight class="comment">//<sp/>Close<sp/>on<sp/>exec<sp/>(Unix<sp/>systems<sp/>only)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1gaf79cb66b43257af42f5e75915c9d3b46" kindref="member">OS_FILE_OPEN_TYPE</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__OS__APIS__FILE_1gaf479f66e1623df5edfa3e38f040f5088" kindref="member">OS_FILE_PERMISSION</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_EXECUTE_OTHERS<sp/>=<sp/>0001,<sp/></highlight><highlight class="comment">//<sp/>0x1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_WRITE_OTHERS<sp/><sp/><sp/>=<sp/>0002,<sp/></highlight><highlight class="comment">//<sp/>0x2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_READ_OTHERS<sp/><sp/><sp/><sp/>=<sp/>0004,<sp/></highlight><highlight class="comment">//<sp/>0x4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_ALL_OTHERS<sp/><sp/><sp/><sp/><sp/>=<sp/>0007,<sp/></highlight><highlight class="comment">//<sp/>0x7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_EXECUTE_GROUP<sp/><sp/>=<sp/>0010,<sp/></highlight><highlight class="comment">//<sp/>0x8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_WRITE_GROUP<sp/><sp/><sp/><sp/>=<sp/>0020,<sp/></highlight><highlight class="comment">//<sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_READ_GROUP<sp/><sp/><sp/><sp/><sp/>=<sp/>0040,<sp/></highlight><highlight class="comment">//<sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_ALL_GROUP<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0070,<sp/></highlight><highlight class="comment">//<sp/>0x38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_EXECUTE_USER<sp/><sp/><sp/>=<sp/>0100,<sp/></highlight><highlight class="comment">//<sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_WRITE_USER<sp/><sp/><sp/><sp/><sp/>=<sp/>0200,<sp/></highlight><highlight class="comment">//<sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_READ_USER<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0400,<sp/></highlight><highlight class="comment">//<sp/>0x100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_PERMISSION_TYPE_ALL_USER<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0700,<sp/></highlight><highlight class="comment">//<sp/>0x1C0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>INT<sp/><ref refid="group__OS__APIS__FILE_1gaba27a650028099cf71b43ff091ac2ca2" kindref="member">OS_FILE_PERMISSION_TYPE</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__FILE_1ggacd4e4a1518bf251af4bfd2a8fe697026ad8f6fe1321e15fe58a5cd567c55848b1" kindref="member">OS_FILE_SEEK_SET</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__FILE_1ggacd4e4a1518bf251af4bfd2a8fe697026a08f959b6f1eab2cc9f26b7e0123e9331" kindref="member">OS_FILE_SEEK_CUR</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__FILE_1ggacd4e4a1518bf251af4bfd2a8fe697026a0502d9863939528bcba9fafa2e489466" kindref="member">OS_FILE_SEEK_END</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1gacd4e4a1518bf251af4bfd2a8fe697026" kindref="member">OS_FILE_SEEK_TYPE</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="struct__OS__FILE__UNIQUE__ID" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__OS__FILE__UNIQUE__ID" kindref="compound">_OS_FILE_UNIQUE_ID</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT64<sp/>_reserved[2];<sp/></highlight><highlight class="comment">//<sp/>Reserved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1gaf388a0f1cc1446b1e1ffca6907a2ffca" kindref="member">OS_FILE_UNIQUE_ID</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_ATTRIBUTES_NONE<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_ATTRIBUTES_EXIST<sp/><sp/><sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),<sp/></highlight><highlight class="comment">//<sp/>file<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_ATTRIBUTES_REGULAR<sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),<sp/></highlight><highlight class="comment">//<sp/>file<sp/>is<sp/>regular</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_ATTRIBUTES_DIRECTORY<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2),<sp/></highlight><highlight class="comment">//<sp/>file<sp/>is<sp/>directory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_FILE_ATTRIBUTES_SYMLINK<sp/><sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>3)<sp/><sp/></highlight><highlight class="comment">//<sp/>file<sp/>is<sp/>symlink</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1ga72758a31adaf5c4afde4341e70a848e7" kindref="member">OS_FILE_ATTRIBUTES</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(TARGET_IA32E)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>64-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_STAT_BODY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_dev;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_ino;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_nlink;<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_mode;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_uid;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_gid;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_rdev;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>long<sp/>st_size;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>long<sp/>st_blksize;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>long<sp/>st_blocks;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_atim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_atime_nsec;<sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_mtim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_mtime_nsec;<sp/>\</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_ctim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_ctime_nsec;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(TARGET_IA32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>32-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_STAT_BODY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>st_dev;<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>__st_ino;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_mode;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_nlink;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_uid;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>st_gid;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>st_rdev;<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>long<sp/>long<sp/>st_size;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_blksize;<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>st_blocks;<sp/>\</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_atim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_atime_nsec;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_mtim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_mtime_nsec;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_ctim;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>st_ctime_nsec;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>st_ino;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="struct__OS__STRUCT__STAT" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct__OS__STRUCT__STAT" kindref="compound">_OS_STRUCT_STAT</ref></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_APIS_STAT_BODY</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1ga111c9133a6edb2e9975e3a68ee2f6c2b" kindref="member">OS_STRUCT_STAT</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga40b4d1b8edd74fb9f1a117d4e9765efd" kindref="member">OS_OpenFD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>path,<sp/>INT<sp/>flags,<sp/><ref refid="group__OS__APIS__FILE_1gaba27a650028099cf71b43ff091ac2ca2" kindref="member">OS_FILE_PERMISSION_TYPE</ref><sp/>mode,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>fd);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga84a9342eec9a5358636f49ea2c817b43" kindref="member">OS_WriteFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>VOID*<sp/>buffer,<sp/>USIZE*<sp/>count);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gad90001eac7b50ec5a2df0e19484321f4" kindref="member">OS_ReadFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>USIZE*<sp/>count,<sp/>VOID*<sp/>buffer);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga23a588dc0dccb95913681fbb7a02d22b" kindref="member">OS_SeekFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>INT<sp/>whence,<sp/>INT64*<sp/>offset);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga2c0fb2fdbfd986c4c5ad03f0237e56e5" kindref="member">OS_CloseFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gaf12497d2883236cddea461efcd1ff3c2" kindref="member">OS_DeleteFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>name);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gab62ec17a32d86493f24fbc83964d12b2" kindref="member">OS_FlushFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga376c04250868ee7f9bcaefee08e4197c" kindref="member">OS_Stat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pathname,<sp/><ref refid="struct__OS__STRUCT__STAT" kindref="compound">OS_STRUCT_STAT</ref>*<sp/>statbuf);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga1f15057e510f50c9041c5977c1ab3099" kindref="member">OS_Fstat</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="struct__OS__STRUCT__STAT" kindref="compound">OS_STRUCT_STAT</ref>*<sp/>statbuf);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gaae4a329b11c2689d737a94b8e8c80338" kindref="member">OS_Lstat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pathname,<sp/><ref refid="struct__OS__STRUCT__STAT" kindref="compound">OS_STRUCT_STAT</ref>*<sp/>statbuf);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gac668ae6bc73afec7519aaf999118e7a2" kindref="member">OS_GetFDAttributes</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="group__OS__APIS__FILE_1ga72758a31adaf5c4afde4341e70a848e7" kindref="member">OS_FILE_ATTRIBUTES</ref>*<sp/>attr);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga13d679b9085d6fa1db37b2816dc86bef" kindref="member">OS_FilePermissionsFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="group__OS__APIS__FILE_1gaba27a650028099cf71b43ff091ac2ca2" kindref="member">OS_FILE_PERMISSION_TYPE</ref>*<sp/>permissions);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga491827c8e00c29e9d0ba9a2ef9b3cd59" kindref="member">OS_FileSizeFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>USIZE*<sp/>size);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga1a590d06769c84c9a60f48f9b5669c73" kindref="member">OS_Cwd</ref>(CHAR*<sp/>cwd,<sp/>INT<sp/>len);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga4e58fdad8fb7819318047b3e835a8e02" kindref="member">OS_Chdir</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>dir,<sp/>CHAR*<sp/>cwd,<sp/>INT<sp/>len);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga20fb89cc9569d6312fea52d24608baf2" kindref="member">OS_OpenDirFD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>name,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>fd);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga89de07f95f92263c15308eecfd5c2445" kindref="member">OS_MkDir</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>name,<sp/><ref refid="group__OS__APIS__FILE_1gaba27a650028099cf71b43ff091ac2ca2" kindref="member">OS_FILE_PERMISSION_TYPE</ref><sp/>mode);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gaad7416af279aaf0f33279ce6d732f0ad" kindref="member">OS_DeleteDirectory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>name);</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga2dd6bf508fd9aeab2a371a3c1d4e285c" kindref="member">OS_IsConsoleFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>INT*<sp/>isConsole);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gad067813c5642c1a4dfe3f8ea9ac9407c" kindref="member">OS_ReadDirectoryFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>USIZE*<sp/>count,<sp/>VOID*<sp/>buffer);</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gabd5a0efabfd2ca004cb9ad6d1f0f8d2c" kindref="member">OS_GetFDAccessMode</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="group__OS__APIS__FILE_1gaf79cb66b43257af42f5e75915c9d3b46" kindref="member">OS_FILE_OPEN_TYPE</ref>*<sp/>mode);</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga91ad7341f68a52f66ab515afa4ac277b" kindref="member">OS_ReadLink</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>path,<sp/>CHAR*<sp/>buf,<sp/>USIZE*<sp/>size);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga38a707fb6f53313ee7c24d75caa51b63" kindref="member">OS_GetFileAttributes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>path,<sp/><ref refid="group__OS__APIS__FILE_1ga72758a31adaf5c4afde4341e70a848e7" kindref="member">OS_FILE_ATTRIBUTES</ref>*<sp/>attr);</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gac1b3420b3c0884a71cb7d00e010b43f0" kindref="member">OS_RenameFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>oldPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CHAR*<sp/>newPath);</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gad73f7448fc8ed37ea36dc1c049d9c513" kindref="member">OS_FileUniqueID</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="struct__OS__FILE__UNIQUE__ID" kindref="compound">OS_FILE_UNIQUE_ID</ref>*<sp/>uniqueId);</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga52f300337dc22a38ba9a1a85ccf30221" kindref="member">OS_DuplicateFD</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/>dupCloseOnExec,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>outFd);</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1ga5f5bd13714935b797d6e5dff17498c5f" kindref="member">OS_Ftruncate</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd,<sp/>INT64<sp/>length);</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__FILE_1gaf3ebf7cd4998316c792a0665241187a1" kindref="member">OS_Realpath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path,<sp/><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/>checkPathExistence,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>resolvedPath);</highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__OS__APIS__FILE_1ga9a8c9ca581cf49d6e1f02ec1b08d6aa8" kindref="member">OS_ReportFileOpen</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__OS__APIS__FILE_1gaf948a39371c9cdee107de39b1b7f9b4b" kindref="member">OS_ReportFileClose</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/><ref refid="group__OS__APIS__FILE_1ga740450a1ad65dd8935ecb54262d6010d" kindref="member">OS_GetLowestFileDescriptorToUse</ref>();</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__OS__APIS__FILE_1ga6fa2794665c242bfa118b3b9ae4712a7" kindref="member">OS_RelocateAndReportFileOpen</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>fd);</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/><ref refid="group__OS__APIS__FILE_1gaff4103e9282c2a0ad0c5dce7414f74a3" kindref="member">OS_WasFileReportedOpen</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>fd);</highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_STDERR_FILENAME<sp/>((const<sp/>CHAR*)((ADDRINT)2))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>file<sp/>guard</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/file.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+1. 插桩工具已预编译好，若要在本地编译，需要clang和make。
+可以通过https://github.com/llvm/llvm-project/releases安装clang，通过cygwin64安装make。
+
+然后在source/tools目录下运行
+make TARGET=ia32
+make TARGET=intel64
+
+2. 示例
+.\pin64.bat -t .\source\tools\mem_rw\obj-intel64\mem_rw.dll -- .\a.exe
+将记录a.exe的所有内存读写行为，并保存到pinatrace.out
+
+
+3. tools list
+mem_rw:监控所有内存读写

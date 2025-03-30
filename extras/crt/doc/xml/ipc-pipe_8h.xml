@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="ipc-pipe_8h" kind="file" language="C++">
+    <compoundname>ipc-pipe.h</compoundname>
+    <includes local="yes">os-apis.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ipc-pipe.h</label>
+        <link refid="ipc-pipe_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>os-apis.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="enum">
+      <member refid="group__OS__APIS__FILE_1ga3b5104eac807de465009822c2b5d83cc" kind="enum"><name>OS_PIPE_CREATE_FLAGS</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__IPC_1ga14a140fa66c2f5d69e59dc0900d8b56b" kind="function"><name>OS_Pipe</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2021<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight></codeline>
+<codeline lineno="9"></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_IPC_PIPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_IPC_PIPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;os-apis.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_PIPE_CREATE_FLAGS_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_PIPE_CREATE_FLAGS_READ_SIDE_INHERITABLE<sp/><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),<sp/></highlight><highlight class="comment">//<sp/>Child<sp/>processes<sp/>inherits<sp/>the<sp/>pipe&apos;s<sp/>read<sp/>side</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_PIPE_CREATE_FLAGS_WRITE_SIDE_INHERITABLE<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1)<sp/><sp/></highlight><highlight class="comment">//<sp/>Child<sp/>processes<sp/>inherits<sp/>the<sp/>pipe&apos;s<sp/>write<sp/>side</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__FILE_1ga3b5104eac807de465009822c2b5d83cc" kindref="member">OS_PIPE_CREATE_FLAGS</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga14a140fa66c2f5d69e59dc0900d8b56b" kindref="member">OS_Pipe</ref>(<ref refid="group__OS__APIS__FILE_1ga3b5104eac807de465009822c2b5d83cc" kindref="member">OS_PIPE_CREATE_FLAGS</ref><sp/>flags,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>readFd,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>writeFd);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>file<sp/>guard</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/ipc-pipe.h"/>
+  </compounddef>
+</doxygen>

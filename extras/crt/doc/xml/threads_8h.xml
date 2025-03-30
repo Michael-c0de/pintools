@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="threads_8h" kind="file" language="C++">
+    <compoundname>threads.h</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="threads_8h_1ad9aa3f1efa2b167afff48449cfb3e788" prot="public" static="no">
+        <name>OS_APIS_TLS_SLOT_TLS_AND_STACK_START_ADDRESS</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/os-apis/00-export-include/os-apis/threads.h" line="18" column="9" bodyfile="Source/os-apis/00-export-include/os-apis/threads.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="threads_8h_1acf74f988d3443b9a016b29fdfc053b92" prot="public" static="no">
+        <name>OS_APIS_TLS_SLOT_TLS_AND_STACK_SIZE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/os-apis/00-export-include/os-apis/threads.h" line="19" column="9" bodyfile="Source/os-apis/00-export-include/os-apis/threads.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__THREAD_1gab71e33264cb5f3aebcd8fffd2d475e50" kind="function"><name>OS_CreateThread</name></member>
+      <member refid="group__OS__APIS__THREAD_1ga9a9056405b34b3cd723b6e6bc1366a61" kind="function"><name>OS_ExitThread</name></member>
+      <member refid="group__OS__APIS__THREAD_1ga51d3a3f045f7d12077b92f49274844b9" kind="function"><name>OS_ThreadExitAndClear</name></member>
+      <member refid="group__OS__APIS__THREAD_1gaa87c77702ceb0356089d8478bd630c55" kind="function"><name>OS_SuspendThread</name></member>
+      <member refid="group__OS__APIS__THREAD_1ga0263cb6e9d2ed19869dd3b94d17216af" kind="function"><name>OS_ResumeThread</name></member>
+      <member refid="group__OS__APIS__THREAD_1gabfa997efc82ef1205a64f76a8928aa28" kind="function"><name>OS_Sleep</name></member>
+      <member refid="group__OS__APIS__THREAD_1ga840329607e681a7ba8ebb941fc5745c5" kind="function"><name>OS_GetTid</name></member>
+      <member refid="group__OS__APIS__THREAD_1ga4e1358f36d98dff7b62de2f410439787" kind="function"><name>OS_Yield</name></member>
+      <member refid="group__OS__APIS__THREAD_1gad5802f57eff3b0b5aabcc1e0b15147d0" kind="function"><name>OS_RaiseException</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2021<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight></codeline>
+<codeline lineno="9"></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_THREAD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_THREAD_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_TLS_SLOT_TLS_AND_STACK_START_ADDRESS<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_TLS_SLOT_TLS_AND_STACK_SIZE<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1gab71e33264cb5f3aebcd8fffd2d475e50" kindref="member">OS_CreateThread</ref>(VOID<sp/>(*ThreadMainFunction)(VOID*),<sp/>VOID*<sp/>ThreadParam,<sp/>VOID*<sp/>stackBottom,<sp/>ADDRINT<sp/>stackSize,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref>*<sp/>td);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1ga9a9056405b34b3cd723b6e6bc1366a61" kindref="member">OS_ExitThread</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>td);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1ga51d3a3f045f7d12077b92f49274844b9" kindref="member">OS_ThreadExitAndClear</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>stackAddr,<sp/>ADDRINT<sp/>stackSize,<sp/>INT32*<sp/>dwordToReset);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1gaa87c77702ceb0356089d8478bd630c55" kindref="member">OS_SuspendThread</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>td);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1ga0263cb6e9d2ed19869dd3b94d17216af" kindref="member">OS_ResumeThread</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>td);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1gabfa997efc82ef1205a64f76a8928aa28" kindref="member">OS_Sleep</ref>(INT<sp/>interval);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1ga840329607e681a7ba8ebb941fc5745c5" kindref="member">OS_GetTid</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref>*<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1ga4e1358f36d98dff7b62de2f410439787" kindref="member">OS_Yield</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__THREAD_1gad5802f57eff3b0b5aabcc1e0b15147d0" kindref="member">OS_RaiseException</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>td,<sp/>UINT32<sp/>code);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>file<sp/>guard</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/threads.h"/>
+  </compounddef>
+</doxygen>

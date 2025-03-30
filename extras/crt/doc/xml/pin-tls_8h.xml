@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="pin-tls_8h" kind="file" language="C++">
+    <compoundname>pin-tls.h</compoundname>
+    <includes refid="types_8h" local="yes">types.h</includes>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="pin-tls_8h_1a7a006b0982c6bee773fd3b44b64c667d" prot="public" static="no">
+        <name>OS_APIS_INVALID_PIN_TLS_INDEX</name>
+        <initializer>((<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref>)-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/os-apis/00-export-include/os-apis/pin-tls.h" line="30" column="9" bodyfile="Source/os-apis/00-export-include/os-apis/pin-tls.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <member refid="group__OS__APIS__PIN__TLS_1ga104d9da3707327696915b45866e0ad19" kind="typedef"><name>TLS_DESTRUCTOR</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kind="typedef"><name>PIN_TLS_INDEX</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__PIN__TLS_1ga697a1391cc590ba4a18c8d091b3dbdb4" kind="function"><name>OS_TlsGetBaseAddress</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1gae9eea41e2ccdc1ad177d30932deb1be5" kind="function"><name>OS_TlsAlloc</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga7c1fb452934baf5ed40089373f894689" kind="function"><name>OS_TlsFree</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1gacbe7fae161714b3553e475a27bbcc6d7" kind="function"><name>OS_TlsGetValue</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga82a6053a0f0a12f88f82f86e4042cf1d" kind="function"><name>OS_TlsGetValueForThread</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga41e05485a8af4f0ea15fbbfe0dc9e9b0" kind="function"><name>OS_TlsGetArrayAddress</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga832a1ddce13cd3e973c86002dc00bb43" kind="function"><name>OS_TlsGetArrayAddressForThread</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1gae2ec9d0e6db3072f25960f4475948244" kind="function"><name>OS_TlsSetValue</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga2afe56e095f96a389f960b79bb842bed" kind="function"><name>OS_TlsSetValueForThread</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1ga102aa3118b484d950429d1062748ed89" kind="function"><name>OS_TlsFreeThreadTls</name></member>
+      <member refid="group__OS__APIS__PIN__TLS_1gaa4e3ad1fa5e3c3286e9ca4a233a84b0b" kind="function"><name>OS_TlsAddStaticTlsDestructor</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2018<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_PIN_TLS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_PIN_TLS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;types.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>VOID<sp/>(*<ref refid="group__OS__APIS__PIN__TLS_1ga104d9da3707327696915b45866e0ad19" kindref="member">TLS_DESTRUCTOR</ref>)(VOID*);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ADDRINT<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_INVALID_PIN_TLS_INDEX<sp/>((PIN_TLS_INDEX)-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">VOID*<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga697a1391cc590ba4a18c8d091b3dbdb4" kindref="member">OS_TlsGetBaseAddress</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/><ref refid="group__OS__APIS__PIN__TLS_1gae9eea41e2ccdc1ad177d30932deb1be5" kindref="member">OS_TlsAlloc</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga104d9da3707327696915b45866e0ad19" kindref="member">TLS_DESTRUCTOR</ref><sp/>dest);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/><ref refid="group__OS__APIS__PIN__TLS_1ga7c1fb452934baf5ed40089373f894689" kindref="member">OS_TlsFree</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/>idx);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">VOID*<sp/><ref refid="group__OS__APIS__PIN__TLS_1gacbe7fae161714b3553e475a27bbcc6d7" kindref="member">OS_TlsGetValue</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/>idx);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">VOID*<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga82a6053a0f0a12f88f82f86e4042cf1d" kindref="member">OS_TlsGetValueForThread</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/>idx,<sp/><ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>ntid);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">VOID**<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga41e05485a8af4f0ea15fbbfe0dc9e9b0" kindref="member">OS_TlsGetArrayAddress</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">VOID**<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga832a1ddce13cd3e973c86002dc00bb43" kindref="member">OS_TlsGetArrayAddressForThread</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>ntid);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/><ref refid="group__OS__APIS__PIN__TLS_1gae2ec9d0e6db3072f25960f4475948244" kindref="member">OS_TlsSetValue</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/>idx,<sp/>VOID*<sp/>val);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/><ref refid="group__OS__APIS__PIN__TLS_1ga2afe56e095f96a389f960b79bb842bed" kindref="member">OS_TlsSetValueForThread</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga0987db84fd6e93b83d2e89e436c37ad1" kindref="member">PIN_TLS_INDEX</ref><sp/>idx,<sp/><ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>ntid,<sp/>VOID*<sp/>val);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">VOID<sp/><ref refid="group__OS__APIS__PIN__TLS_1ga102aa3118b484d950429d1062748ed89" kindref="member">OS_TlsFreeThreadTls</ref>(<ref refid="group__OS__APIS__TYPES_1ga20167a3cedec6512ccdc030b50ee780b" kindref="member">NATIVE_TID</ref><sp/>ntid);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><ref refid="group__OS__APIS__TYPES_1gad312c486942310e24394e7ea81f8f7e1" kindref="member">BOOL_T</ref><sp/><ref refid="group__OS__APIS__PIN__TLS_1gaa4e3ad1fa5e3c3286e9ca4a233a84b0b" kindref="member">OS_TlsAddStaticTlsDestructor</ref>(<ref refid="group__OS__APIS__PIN__TLS_1ga104d9da3707327696915b45866e0ad19" kindref="member">TLS_DESTRUCTOR</ref><sp/>destructor);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>file<sp/>guard</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/pin-tls.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="host_8h" kind="file" language="C++">
+    <compoundname>host.h</compoundname>
+    <sectiondef kind="enum">
+      <member refid="group__OS__APIS__HOST_1ga0df31212789b90ca6b23a8c008b5c120" kind="enum"><name>OS_HOST_CPU_ARCH_TYPE</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__HOST_1gaa5eea5ebfb007d1e0f818444680f6d2a" kind="function"><name>OS_GetHostName</name></member>
+      <member refid="group__OS__APIS__HOST_1ga78c280fd813beaea5d9347a6d06836fb" kind="function"><name>OS_GetHostCPUArch</name></member>
+      <member refid="group__OS__APIS__HOST_1ga6ab76cf39baccb7570e6905912fc9825" kind="function"><name>OS_CPUArchToString</name></member>
+      <member refid="group__OS__APIS__HOST_1ga63f243fccfef0a8b6f810c9bbe1af66c" kind="function"><name>OS_GetKernelRelease</name></member>
+      <member refid="group__OS__APIS__HOST_1ga0a4d2b855c06ef3c0a12f5c34f858650" kind="function"><name>OS_GetOSName</name></member>
+      <member refid="group__OS__APIS__HOST_1ga2fdf5c40bd8366f41ccddc7a89943a15" kind="function"><name>OS_GetOSVersion</name></member>
+      <member refid="group__OS__APIS__HOST_1ga4eab96999f13590e408bd245a23c3f83" kind="function"><name>OS_ReadProcessorFrequency</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2021<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight></codeline>
+<codeline lineno="9"></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_HOST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_HOST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_HOST_CPU_ARCH_TYPE_INVALID<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_HOST_CPU_ARCH_TYPE_IA32<sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_HOST_CPU_ARCH_TYPE_INTEL64<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__HOST_1ga0df31212789b90ca6b23a8c008b5c120" kindref="member">OS_HOST_CPU_ARCH_TYPE</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1gaa5eea5ebfb007d1e0f818444680f6d2a" kindref="member">OS_GetHostName</ref>(CHAR*<sp/>buf,<sp/>USIZE<sp/>buflen);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1ga78c280fd813beaea5d9347a6d06836fb" kindref="member">OS_GetHostCPUArch</ref>(<ref refid="group__OS__APIS__HOST_1ga0df31212789b90ca6b23a8c008b5c120" kindref="member">OS_HOST_CPU_ARCH_TYPE</ref>*<sp/>arch);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__OS__APIS__HOST_1ga6ab76cf39baccb7570e6905912fc9825" kindref="member">OS_CPUArchToString</ref>(<ref refid="group__OS__APIS__HOST_1ga0df31212789b90ca6b23a8c008b5c120" kindref="member">OS_HOST_CPU_ARCH_TYPE</ref><sp/>arch);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1ga63f243fccfef0a8b6f810c9bbe1af66c" kindref="member">OS_GetKernelRelease</ref>(CHAR*<sp/>buf,<sp/>USIZE<sp/>bufsize);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1ga0a4d2b855c06ef3c0a12f5c34f858650" kindref="member">OS_GetOSName</ref>(CHAR*<sp/>buf,<sp/>USIZE<sp/>bufsize);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1ga2fdf5c40bd8366f41ccddc7a89943a15" kindref="member">OS_GetOSVersion</ref>(CHAR*<sp/>buf,<sp/>USIZE<sp/>bufsize);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__HOST_1ga4eab96999f13590e408bd245a23c3f83" kindref="member">OS_ReadProcessorFrequency</ref>(UINT32*<sp/>freq);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>OS_APIS_HOST_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/host.h"/>
+  </compounddef>
+</doxygen>

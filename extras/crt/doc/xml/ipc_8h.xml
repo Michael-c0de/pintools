@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.11.0" xml:lang="en-US">
+  <compounddef id="ipc_8h" kind="file" language="C++">
+    <compoundname>ipc.h</compoundname>
+    <includes local="yes">os-apis.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/socket.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>ipc.h</label>
+        <link refid="ipc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>os-apis.h</label>
+      </node>
+      <node id="4">
+        <label>sys/socket.h</label>
+      </node>
+      <node id="3">
+        <label>sys/types.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="enum">
+      <member refid="group__OS__APIS__IPC_1ga7d64e90581bdd8948ed13f30f6b6a522" kind="enum"><name>OS_APIS_IPC_SOCKET_DOMAIN</name></member>
+      <member refid="group__OS__APIS__IPC_1ga0de2b9d6f60ccba50e4c7db19697a45a" kind="enum"><name>OS_APIS_IPC_SOCKET_TYPE</name></member>
+      <member refid="group__OS__APIS__IPC_1gaab521f2803eec423dc1cd570b88d90d2" kind="enum"><name>OS_APIS_IPC_SOCKET_PROTOCOL</name></member>
+      <member refid="group__OS__APIS__IPC_1ga26c0ad3e94afe7b80683866c7cda8896" kind="enum"><name>OS_APIS_IPC_SHUTDOWN</name></member>
+      <member refid="group__OS__APIS__IPC_1gab1d4d01ba1dcfa1faaf28c50874c1eb6" kind="enum"><name>OS_APIS_IPC_SENDTO_FLAGS</name></member>
+    </sectiondef>
+    <sectiondef kind="func">
+      <member refid="group__OS__APIS__IPC_1ga03d4d6d81193b0aee18e724b08bc9454" kind="function"><name>OS_Socket</name></member>
+      <member refid="group__OS__APIS__IPC_1ga1daa91d902fa7be8dcfff19944dd34d9" kind="function"><name>OS_Accept</name></member>
+      <member refid="group__OS__APIS__IPC_1ga19d9a8ef0c34924ed9ac47f450a35dc0" kind="function"><name>OS_Listen</name></member>
+      <member refid="group__OS__APIS__IPC_1ga07c0e1d8c12c0cfe4e3b861c20c0fac3" kind="function"><name>OS_Connect</name></member>
+      <member refid="group__OS__APIS__IPC_1gad32d0b42ab5fb3a7df1b1a3d083f2431" kind="function"><name>OS_Bind</name></member>
+      <member refid="group__OS__APIS__IPC_1ga6ba7797f7b6361300804b2855a2fa5f9" kind="function"><name>OS_GetSockName</name></member>
+      <member refid="group__OS__APIS__IPC_1ga6ce1fb8088aa608c14552a4a9bea39d1" kind="function"><name>OS_Shutdown</name></member>
+      <member refid="group__OS__APIS__IPC_1ga0bea137b6fc1dd5849294e2893c75460" kind="function"><name>OS_SendTo</name></member>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2015-2021<sp/>Intel<sp/>Corporation.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>MIT</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;COMPONENT&gt;:<sp/>os-apis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&lt;FILE-TYPE&gt;:<sp/>component<sp/>public<sp/>header</highlight></codeline>
+<codeline lineno="9"></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OS_APIS_IPC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_APIS_IPC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;os-apis.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/socket.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1gga7d64e90581bdd8948ed13f30f6b6a522a9069fcf91ce65085881442130710b1da" kindref="member">OS_APIS_IPC_SOCKET_DOMAIN_INET</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>OS_APIS_IPC_SOCKET_DOMAIN_UNIX<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__IPC_1ga7d64e90581bdd8948ed13f30f6b6a522" kindref="member">OS_APIS_IPC_SOCKET_DOMAIN</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1gga0de2b9d6f60ccba50e4c7db19697a45aaa25c5e47916c96deb50046b73aa369f2" kindref="member">OS_APIS_IPC_SOCKET_TYPE_STREAM</ref><sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__IPC_1ga0de2b9d6f60ccba50e4c7db19697a45a" kindref="member">OS_APIS_IPC_SOCKET_TYPE</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1ggaab521f2803eec423dc1cd570b88d90d2a5e282954e3ecc849584d092ec880e5be" kindref="member">OS_APIS_IPC_SOCKET_PROTOCOL_DEFAULT</ref><sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__IPC_1gaab521f2803eec423dc1cd570b88d90d2" kindref="member">OS_APIS_IPC_SOCKET_PROTOCOL</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1gga26c0ad3e94afe7b80683866c7cda8896a10843882381f2ffa6877e6277c1cb45e" kindref="member">OS_APIS_IPC_SHUTDOWN_INVALID</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1gga26c0ad3e94afe7b80683866c7cda8896a372ab0a0c07fcdf8f931ef3dd75f95ac" kindref="member">OS_APIS_IPC_SHUTDOWN_READ</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1gga26c0ad3e94afe7b80683866c7cda8896ab03c1ee06dc0d5b137dd36dd8214d596" kindref="member">OS_APIS_IPC_SHUTDOWN_WRITE</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__IPC_1ga26c0ad3e94afe7b80683866c7cda8896" kindref="member">OS_APIS_IPC_SHUTDOWN</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1ggab1d4d01ba1dcfa1faaf28c50874c1eb6adf730151bd0655a2d460eefbeea405f3" kindref="member">OS_APIS_IPC_SENDTO_FLAGS_NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1ggab1d4d01ba1dcfa1faaf28c50874c1eb6a23b1132fa5273b867c98414aca3b9a1b" kindref="member">OS_APIS_IPC_SENDTO_FLAGS_OOB</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1ggab1d4d01ba1dcfa1faaf28c50874c1eb6a7153eed4772f54ac62cf99fb3ab9f778" kindref="member">OS_APIS_IPC_SENDTO_FLAGS_DONT_ROUTE</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__IPC_1ggab1d4d01ba1dcfa1faaf28c50874c1eb6a1c70fe575381459814bc5f80f3862846" kindref="member">OS_APIS_IPC_SENDTO_FLAGS_NO_SIGNAL</ref><sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}<sp/><ref refid="group__OS__APIS__IPC_1gab1d4d01ba1dcfa1faaf28c50874c1eb6" kindref="member">OS_APIS_IPC_SENDTO_FLAGS</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga03d4d6d81193b0aee18e724b08bc9454" kindref="member">OS_Socket</ref>(<ref refid="group__OS__APIS__IPC_1ga7d64e90581bdd8948ed13f30f6b6a522" kindref="member">OS_APIS_IPC_SOCKET_DOMAIN</ref><sp/>domain,<sp/><ref refid="group__OS__APIS__IPC_1ga0de2b9d6f60ccba50e4c7db19697a45a" kindref="member">OS_APIS_IPC_SOCKET_TYPE</ref><sp/>type,<sp/><ref refid="group__OS__APIS__IPC_1gaab521f2803eec423dc1cd570b88d90d2" kindref="member">OS_APIS_IPC_SOCKET_PROTOCOL</ref><sp/>protocol,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>fd);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga1daa91d902fa7be8dcfff19944dd34d9" kindref="member">OS_Accept</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>addr,<sp/>USIZE*<sp/>addrlen,<sp/><ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref>*<sp/>newfd);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga19d9a8ef0c34924ed9ac47f450a35dc0" kindref="member">OS_Listen</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/>INT<sp/>backlog);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga07c0e1d8c12c0cfe4e3b861c20c0fac3" kindref="member">OS_Connect</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>addr,<sp/>USIZE<sp/>addrlen);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1gad32d0b42ab5fb3a7df1b1a3d083f2431" kindref="member">OS_Bind</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>addr,<sp/>USIZE<sp/>addrlen);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga6ba7797f7b6361300804b2855a2fa5f9" kindref="member">OS_GetSockName</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>addr,<sp/>USIZE*<sp/>addrlen);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga6ce1fb8088aa608c14552a4a9bea39d1" kindref="member">OS_Shutdown</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/><ref refid="group__OS__APIS__IPC_1ga26c0ad3e94afe7b80683866c7cda8896" kindref="member">OS_APIS_IPC_SHUTDOWN</ref><sp/>how);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><ref refid="struct__OS__RETURN__CODE" kindref="compound">OS_RETURN_CODE</ref><sp/><ref refid="group__OS__APIS__IPC_1ga0bea137b6fc1dd5849294e2893c75460" kindref="member">OS_SendTo</ref>(<ref refid="group__OS__APIS__TYPES_1gaeb77513b3223d163064c7b1f5e38e8c3" kindref="member">NATIVE_FD</ref><sp/>sockfd,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/><ref refid="group__OS__APIS__IPC_1gab1d4d01ba1dcfa1faaf28c50874c1eb6" kindref="member">OS_APIS_IPC_SENDTO_FLAGS</ref><sp/>flags,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sockaddr*<sp/>dest_addr,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USIZE<sp/>dest_len,<sp/>USIZE*<sp/>buf_length);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>OS_APIS_IPC_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Source/os-apis/00-export-include/os-apis/ipc.h"/>
+  </compounddef>
+</doxygen>
