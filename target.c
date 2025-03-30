@@ -1,12 +1,21 @@
 #include <stdio.h>
-int main(int argc, char const *argv[])
+#include <string.h>
+
+int main(int argc, char **argv)
 {
-    int a = 2;
-    int b = 3;
-    int c = a + b;
-    printf("a @ %p\n", &a);
-    printf("b @ %p\n", &b);
-    printf("c @ %p\n", &c);
+    char *src = "11111111111111111111111111111\n";
+    char sink[20];
+
+    printf("src = %p, sink = %p\n", src, sink);
+    char *m1 = src;
+    char *m2 = m1;
+    char *m3 = m2;
+    memcpy(sink, src, 20);
+    sink[2] += 1;
+
+    sink[10] += 1;
+
+    sink[14] += 1;
 
     return 0;
 }
