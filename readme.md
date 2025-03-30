@@ -13,8 +13,8 @@ make：通过cygwin64安装
 
 ```shell
 cd .\source\tools\mem_rw\
-make TARGET=ia32    // for 64
-make TARGET=intel64 // for 32
+make TARGET=ia32    // for 32
+make TARGET=intel64 // for 64
 
 ```
 
@@ -107,7 +107,7 @@ src = 00624160, sink = 00D9FC7C
 
 
 
-**污点分析需定制mytest.cpp**，修改后请在 `source\tools\dta` 目录下运行 `make TARGET=ia32 clean` 或 `make TARGET=intel 64 clean` 删除缓存，再另行编译。
+**污点分析需定制mytest.cpp**，修改后请在 `source\tools\dta` 目录下运行 `make TARGET=ia32 clean` 或 `make TARGET=intel64 clean` 删除缓存，再另行编译。
 
 
 
