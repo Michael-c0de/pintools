@@ -12,7 +12,7 @@ make：通过cygwin64安装
 #### 2. 编译
 
 ```shell
-cd .\source\tools\mem_rw\
+cd .\source\tools\ins-trace\
 make TARGET=ia32    // for 32
 make TARGET=intel64 // for 64
 
@@ -24,26 +24,14 @@ make TARGET=intel64 // for 64
 
 （以下功能都支持ia32/intel64）
 
-##### 3.1 内存读写监控
+##### 3.1 程序执行信息记录
 
-```shell
-.\pin64.bat -t .\source\tools\mem_rw\obj-intel64\mem_rw.dll -- .\a.exe
-# 32位请使用 .\pin32.bat -t .\source\tools\mem_rw\obj-ia32\mem_rw.dll -- .\a32.exe 
-```
+1. 指令执行记录ins-trace
+2. 内存访问记录mem-rw-trace
+3. 函数执行记录func-trace
+4. 模块加载记录img-trace
 
-内存读写情况记录在`mem_rw.out`
-
-
-
-##### 3.2 程序trace记录
-
-```shell
-.\pin64.bat -t .\source\tools\trace\obj-intel64\trace.dll -- .\a.exe
-```
-
-
-
-##### 3.3 动态污点分析
+##### 3.2 动态污点分析
 
 动态污点分析功能迁移自[AngoraFuzzer/libdft64: libdft for Intel Pin 3.x and 64 bit platform. (Dynamic taint tracking, taint analysis)](https://github.com/AngoraFuzzer/libdft64)，对其稍加修改，即可支持32位程序。
 
@@ -111,5 +99,13 @@ src = 00624160, sink = 00D9FC7C
 
 
 
-##### 3.4 more（敬请期待
+##### 3.4 pintools分析对抗
+
+pintools插桩会显著降低程序性能，`attack\main.cpp`通过测算目标函数执行时间检测是否存在插桩。当函数执行时间明显超出正常范围时，报告潜在的插桩。
+
+```bash
+PS C:\Users\16795\Desktop\pintools> .\pin32.bat -t .\source\tools\ins-trace\obj-ia32\ins-trace.dll -- .\attack\debugger_check.exe
+2750
+Possible performance anomaly detected (instrumentation?)!
+```
 
