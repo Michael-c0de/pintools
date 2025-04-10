@@ -1,16 +1,21 @@
-# Compiler settings for MSVC
+# Compiler and flags
 CC = cl
-CFLAGS = /std:c++17 /W4
+CFLAGS = /std:c11 /W4
 LDFLAGS = user32.lib kernel32.lib
 
-# Output
-EXEC = debugger_check.exe
-SRC = main.cpp
+# Get all .c files in the directory
+SRC = $(wildcard *.cpp)
 
-all: $(EXEC)
+# Strip extension to get executable names
+EXE = $(SRC:.cpp=.exe)
 
-$(EXEC): $(SRC)
-	$(CC) $(SRC) $(CFLAGS) $(LDFLAGS) /Fe$(EXEC)
+# Default target: build all executables
+all: $(EXE)
 
+# Pattern rule: each .c → .exe
+%.exe: %.cpp
+	$(CC) $< $(CFLAGS) $(LDFLAGS) /Fe$@
+
+# Clean all generated executables and intermediates
 clean:
-	del .\$(EXEC)
+	del /Q *.obj *.exe

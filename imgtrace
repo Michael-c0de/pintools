@@ -1,0 +1,13 @@
+[LOAD] C:\Users\16795\Desktop\pintools\attack\dis.exe	 (id = 21110623253299201, low = 21131518274236415, high = 4920065, entry = 120731096898863105)
+[LOAD] C:\Windows\SysWOW64\kernel32.dll	 (id = 8486189072849567746, low = 8486568887374327807, high = 1975933296, entry = 120731096898863106)
+[LOAD] C:\Windows\SysWOW64\KernelBase.dll	 (id = 8569787140932632579, low = 8575663070508548095, high = 1996677152, entry = 120731096898863107)
+[LOAD] C:\Windows\SysWOW64\ntdll.dll	 (id = 8593149563999617028, low = 2002571263, high = 0, entry = 120731096898863108)
+[LOAD] C:\Windows\SysWOW64\kernel.appcore.dll	 (id = 8345733059470950405, low = 8345813394482491391, high = 1943161104, entry = 120708934867615749)
+[LOAD] C:\Windows\SysWOW64\msvcrt.dll	 (id = 8425953427833487366, low = 8426900659063463935, high = 1962040704, entry = 120708934867615750)
+[UNLOAD] C:\Users\16795\Desktop\pintools\attack\dis.exe	 (id = 4294967297)
+[UNLOAD] C:\Windows\SysWOW64\kernel32.dll	 (id = 8589934594)
+[UNLOAD] C:\Windows\SysWOW64\KernelBase.dll	 (id = 12884901891)
+[UNLOAD] C:\Windows\SysWOW64\ntdll.dll	 (id = 17179869188)
+[UNLOAD] C:\Windows\SysWOW64\kernel.appcore.dll	 (id = 21474836485)
+[UNLOAD] C:\Windows\SysWOW64\msvcrt.dll	 (id = 25769803782)
+#eof
